@@ -8,9 +8,9 @@ import theme from 'styles/theme';
 import GlobalStyle from 'styles/styles';
 import 'styles/css/nprogress.css';
 
-import Star from 'components/Star';
-import Footer from 'components/Footer';
-import Home from 'components/Home';
+import Star from 'components/other/Star';
+import Footer from 'components/other/Footer';
+import Home from 'components/other/Home';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());

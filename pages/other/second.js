@@ -1,5 +1,5 @@
-import PageContainer from 'components/PageContainer';
-import Actions from 'components/Actions';
+import PageContainer from 'components/other/PageContainer';
+import Actions from 'components/other/Actions';
 
 const Second = () => (
   <PageContainer title="You Are In Second Page">

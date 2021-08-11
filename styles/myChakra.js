@@ -114,8 +114,7 @@ export const NewButton = ({ children }) => {
   };
   return (
     <Button
-      
-      onClick={toggleColorMode}
+      // onClick={toggleColorMode}
       bg={bgColor[colorMode]}
       color={fontColor[colorMode]}
       _hover={{

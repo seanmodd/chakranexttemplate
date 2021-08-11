@@ -3,6 +3,7 @@ import {
   Button,
   ButtonGroup,
   VStack,
+  Box,
   HStack,
   useColorMode,
 } from '@chakra-ui/react';
@@ -23,15 +24,16 @@ const Actions = ({ switchName }) => {
 
   let actions = (
     <>
-      <NewButton
+      <Box
+        onClick={toggleColorMode}
         leftIcon={colorMode === 'light' ? <FaRegMoon /> : <FaRegSun />}
       >
-        {colorMode === 'dark' ? 'Dark' : 'Light'} Mode
-      </NewButton>
+        <NewButton>{colorMode === 'dark' ? 'Dark' : 'Light'} Mode</NewButton>
+      </Box>
       <Button
         rightIcon={<FaAngleRight />}
         onClick={() =>
-          router.push(switchName === 'Second Page' ? '/second' : '/')
+          router.push(switchName === 'Second Page' ? '/other/second' : '/other')
         }
         bg={bgColor[colorMode]}
         color={color[colorMode]}
@@ -50,7 +52,9 @@ const Actions = ({ switchName }) => {
             <Button
               leftIcon={<FaAngleLeft />}
               onClick={() =>
-                router.push(switchName === 'Second Page' ? '/second' : '/')
+                router.push(
+                  switchName === 'Second Page' ? '/other/second' : '/other'
+                )
               }
             >
               {switchName}
